@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<headers>
+<meta charset=utf-8 />
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/lottery.css" />
+<!-- <script type="text/javascript" src="js/3dtag.js"></script> -->
+<script data-main="js/config" src="js/require.js"></script>
+</headers>
+<body>
+<button id="btn">fullscreen</button>
+<div id="body">
+    <h1 id="header" style="color:white;text-align: center;"></h1>
+    <div id="bingo">
+    </div>
+    <hr>
+    <div id="div1">
+    </div>
+</div>
+<footer> @2018 AcinGame.</footer>
+
+<script type="text/javascript">
+      var btn = document.getElementById("btn");
+
+     btn.onclick = function() {
+         var width =  window.screen.width;
+         var height =   window.screen.height;
+         var elem = document.getElementById("body");
+         requestFullScreen(elem);
+     }
+
+     function requestFullScreen(element) {
+         if (element.requestFullscreen) {
+             element.requestFullscreen();
+         }
+     //FireFox
+         else if (element.mozRequestFullScreen) {
+             element.mozRequestFullScreen();
+         }
+     //Chrome等
+         else if (element.webkitRequestFullScreen) {
+             element.webkitRequestFullScreen();
+         }
+     //IE11
+         else if (element.msRequestFullscreen) {
+             element.msRequestFullscreen();
+         }
+     };
+
+</script>
+</body></html>
+
+<script type="text/javascript">
+    requirejs(['lottery']);
+</script>

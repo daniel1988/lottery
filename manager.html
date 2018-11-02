@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lottery Project</title>
+        <script data-main="js/config" src="js/require.js"></script>
+<style>
+    body {
+        background: #000 no-repeat center;
+        color:white;
+    }
+
+    #admin {
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <div id="admin">
+        <button id="initLuckNum">初始化LuckNum</button>
+        <button id="initPrize">initPrize</button>
+        <button id="initStaff">initStaff</button>
+
+        <button id="initAll">始初化所有数据</button>
+    </div>
+</body>
+<script type="text/javascript">
+    requirejs(['manager']);
+</script>
+</html>
